@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import Header from "./components/Header";
+import MainImg from "./components/MainImg";
+import MainContent from "./components/MainContent";
+import { useState } from "react";
 
 function App() {
+  const [productsInCart, setProductInCart] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header
+        productsInCart={productsInCart}
+        setProductInCart={setProductInCart}
+      />
+
+      <div className="main">
+        <MainImg />
+      </div>
+      <MainContent
+        productsInCart={productsInCart}
+        setProductInCart={setProductInCart}
+      />
+    </>
   );
 }
 
