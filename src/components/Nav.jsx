@@ -22,4 +22,7 @@ function Mobile({ isOpen, setIsOpen }) {
     </div>
   );
 }
+function Desktop(){
+  
+}
 export default Mobile;

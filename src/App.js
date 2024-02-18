@@ -12,14 +12,15 @@ function App() {
         productsInCart={productsInCart}
         setProductInCart={setProductInCart}
       />
-
-      <div className="main">
-        <MainImg />
+      <div className="product-container">
+        <div className="main">
+          <MainImg />
+        </div>
+        <MainContent
+          productsInCart={productsInCart}
+          setProductInCart={setProductInCart}
+        />
       </div>
-      <MainContent
-        productsInCart={productsInCart}
-        setProductInCart={setProductInCart}
-      />
     </>
   );
 }
